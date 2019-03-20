@@ -60,6 +60,17 @@ main section.categories-show {
         }
       }
 
+      .sold_out {
+        position: absolute;
+        top: 0rem;
+        left: 0;
+        padding: 10px;
+        background-color: red;
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 20px;
+        font-size: 0.8em;
+      }
+
     }
   }
 }
@@ -72,5 +83,9 @@ main section.products-show {
     }
   }
 }
+
+
+
+
 
 
