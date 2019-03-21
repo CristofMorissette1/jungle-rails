@@ -1,0 +1,15 @@
+<section class="admin_categories_index">
+
+
+    <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
+  
+
+  <div class="panel panel-category products">
+
+    <table class="table table-bordered">
+      <tbody>
+        <%= render @categories %>
+      </tbody>
+    </table>
+   </div>
+</section>
