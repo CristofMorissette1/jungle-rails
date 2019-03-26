@@ -40,7 +40,7 @@ cat1.products.create!({
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel1.jpg'),
   quantity: 0,
-  price: 64.99
+  price: 64.99,
 })
 
 cat1.products.create!({
@@ -48,7 +48,7 @@ cat1.products.create!({
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel2.jpg'),
   quantity: 18,
-  price: 124.99
+  price: 124.99,
 })
 
 cat1.products.create!({
@@ -97,7 +97,7 @@ cat2.products.create!({
   description: Faker::Hipster.paragraph(4),
   image: open_asset('electronics2.jpg'),
   quantity: 3,
-  price: 26.00
+  price: 26.00,
 })
 
 cat2.products.create!({
@@ -132,5 +132,25 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+Review.create!({
+  product_id: 2,
+  user_id: 2,
+  description: 'This is bad!',
+  rating: 1
+})
+
+Review.create!({
+  product_id: 3,
+  user_id: 1,
+  description: 'This is good!',
+  rating: 3 
+})
+
+Review.create!({
+  product_id: 1,
+  user_id: 3,
+  description: 'This is good!',
+  rating: 5
+})
 
 puts "DONE!"

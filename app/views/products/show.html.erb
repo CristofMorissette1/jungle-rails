@@ -24,6 +24,21 @@
           <dd><%= @product.price %></dd>
         </dl>
       </div>
+
+      <%= form_for :reviews, url: "/products/#{@product.id}/reviews" do |f|%>
+
+  Review: <%= f.text_field :description %>
+  rating: <%= f.select :rating, [[1,1], [2,2], [3,3], [4,4], [5,5]] %>
+  <%= f.submit "Submit" %>
+
+<% end %>
+
+      <hr>
+      <% @product.reviews.each do |review|%>
+      <p><%= review.description %></p>
+      <p><%=review.rating%></p>
+      <hr>
+      <%end%>
     </div>
 
   </article>
